@@ -66,7 +66,8 @@ class GpsSourceType(Enum):
 
 DEFAULT_GPS_SOURCE = GpsSourceType.GPSD
 GPS_SOURCE_MAP: Mapping[Optional[str], GpsSourceType] = {
-    "beaglebone-green-gateway": GpsSourceType.I2C
+    "beaglebone-green-gateway": GpsSourceType.I2C,
+    "raspberrypicm4-ioboard": GpsSourceType.I2C
 }
 GPS_DIGITS_PRECISION = int(os.getenv("GPS_DIGITS_PRECISION", "2"))
 GPS_FIX_MAX_AGE = timedelta(seconds=int(os.getenv("GPS_FIX_MAX_AGE_SECONDS", "600")))
